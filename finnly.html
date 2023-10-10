@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!--Import Bootstap and my stylesheet-->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous">
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous">
+        </script>
+
+        <link href="styles.css" rel="stylesheet">
+
+        <title>My Webpage</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body id="finnly_body">
+
+        <script>
+
+            // Retrieve the selected background theme from localStorage
+            let current_theme = localStorage.getItem('current_theme');
+            if (current_theme) {
+                document.querySelector('body').style.backgroundImage = `url('${current_theme}')`; // Notice the additional quotes
+            }
+        
+        </script>
+
+        <nav class="navbar navbar-expand-lg navbar-light" id="my-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html" id="home_button">| Home |</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="about_me.html">| About Me |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="art_showcase.html">| Gallery |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="finnly.html">| Mock CV |</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid my-5">
+            <h1>
+                Welcome!
+            </h1>
+        
+            <!--All information in my bio, using two paragraph tags and one unordered list tag, with <br>-->
+            <h3>About me:</h3>
+            <p>
+                Hello, my name is Finnly, I am a 19 year old Fox from South Africa.
+                <br>
+                I am currently studying through Harvard's © CS50 Course to help me become a software engineer, and this is a little bit to know about me.
+            </p>
+        
+            <p>
+                Growing up, I've always been fascinated by technology and how awe-inducing it was to see keystrokes/mouse clicks make things happen on a separate screen.
+                <br>
+                Now that I am beginning my life as an adult, I have decided to take up software engineering to pursue that child-like fascination further.
+                <br>
+                Now I get to learn how all these magical effects are created, and make them from scratch myself!
+            </p>
+            <p> <b> A bit of other misc. information about me though: </b> </p>
+        
+            <ul class="centered-list">
+                <li>
+                    I love the outdoors (quite contrasting to working indoors with computers haha),
+                    <br>
+                    and partake in archery, mountain-biking and just generally going outside.
+                </li>
+                <br>
+                <li>
+                    I am also a beginner free-lance artist, I love creating stuff from basically nothing.
+                    <br>
+                    (I feel like this is something that really makes me love software engineering more, being able to create something.)
+                </li>
+            </ul>
+        
+            <!--All links and a photo of Finnly (the fox) semi-responsive to smaller view ports-->
+            <h3>How to contact me:</h3>
+            <label>
+                <b>A photo of me:</b>
+            </label>
+            <br>
+            <div class="container">
+                <img src="Website Sample Images/Finnly_PNG_800px.png" alt="Finnly Fox Photo" class="img-fluid">
+            </div>
+        
+            <!--Used a table to display all links and info-->
+            <table class="centered-table">
+                <tbody>
+                    <tr>
+                        <td>Full Name: Finnly Foxington</td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number: 123-456-7890</td>
+                    </tr>
+                    <tr>
+                        <td>Email Address: finnlyfox@fluffmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Socials:
+                            <!--None of these links actually go to where they say, but click them and have fun xd-->
+                            <!--I figured this was fine since it shows I know how to use hyperlinks-->
+                            <a target="_blank" href="https://www.youtube.com/watch?v=XqZsoesa55w" class="button-link">
+                                <button class="button">LinkedIn</button>
+                            </a>
+                            <a target="_blank" href="https://www.youtube.com/watch?v=Y82jDHRrswc" class="button-link">
+                                <button class="button">Twitter</button>
+                            </a>
+                            <a target="_blank" href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="button-link">
+                                <button class="button">Discord</button>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <!--List of languages and skills (also current educational achievement status)-->
+            <h3>Knowledge:</h3>
+            <ul class="centered-list">
+                <li>Current Coding langues I have learned general syntax for:</li>
+                <ul class="centered-list" id="list_experiances">
+                    <li>Python</li>
+                    <li>C</li>
+                    <li>JavaScript</li>
+                    <li>SQLite3</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>DTL (Django Template Language)</li>
+                </ul>
+                <li>Knowledge on applications such as Abobe Photoshop© and Procreate©</li>
+                <li id="list_experiances">Graduated my Cambridge AS-Levels</li>
+                <li id="list_experiances">Can solve a Rubiks© Cube (My Magnum Opus)</li>
+        
+                <li>Work Experience</li>
+                <ul class="centered-list" id="list_experiances">
+                    <li><b>N/A</b></li>
+                </ul>
+                <li>Projects I've worked on:</li>
+                    <ul id="list_experiances">
+                        <li>C, Python, HTML, CSS, JS and SQLite projects from <b>Harvard's</b> © CS50 Course</li>
+                        <li>Python, HTML, CSS, SQLite and Django projects from <b>HyperionDev's</b> © Software Engineering Boot Camp</li>
+                    </ul>
+            </ul>
+            <br>
+        
+            <!--Simple farewell message-->
+            <h2>And with that all said, thank you for reading my CV!</h2>
+        
+            <!--3 <br> tags used to create a blank space at the bottom of the page where a footer would be-->
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </body>
+</html>
